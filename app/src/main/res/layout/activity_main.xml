@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/linear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#eeeeee"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="7dp"
+                android:background="@drawable/serach_rect"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/ic_search" />
+
+                <customfonts.EditText_Roboto_Regular
+                    android:id="@+id/edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transperent"
+                    android:hint="Search for apps"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:textColorHint="#363636"
+                    android:textSize="11dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <View
+
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/view_line" />
+
+
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="7dp"
+                    android:background="#eef3ed"
+                    android:orientation="horizontal">
+
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="0dp"
+                        android:layout_height="115dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gray_banner_img"
+                        app:riv_border_color="#00000000"
+                        app:riv_border_width="3dip"
+                        app:riv_corner_radius="5dip"
+                        app:riv_oval="false" />
+
+
+                    <!--<design.ws.com.appstore.RoundishImageView-->
+                    <!--android:layout_weight="1"-->
+                    <!--android:layout_width="0dp"-->
+                    <!--android:layout_height="118dp"-->
+                    <!--android:scaleType="fitXY"-->
+                    <!--app:cornerRadius="5dp"-->
+                    <!--android:background="@drawable/mobile_app"/>-->
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+
+                        android:layout_width="0dp"
+                        android:layout_height="115dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_weight="1"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/gray_banner_img"
+                        app:riv_border_color="#00000000"
+                        app:riv_border_width="3dip"
+                        app:riv_corner_radius="5dip"
+                        app:riv_oval="false" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="#eaece9" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerview_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/bg_color"
+                        android:clipToPadding="false"
+                        android:nestedScrollingEnabled="false"
+                        android:paddingTop="10dp" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/shadow" />
+
+
+</RelativeLayout>
